@@ -1,0 +1,181 @@
+//#include<stdio.h>
+//int main()
+//{
+//	int i, mark, max, n;
+//	printf("Enter n:");
+//	scanf_s("%d", &n);
+//	printf("Enter %d marks:", n);
+//	scanf_s("%d", &mark);
+//	max = mark;
+//	for (i = 1; i < n; i++)
+//	{
+//		scanf_s("%d", &mark);
+//		if (max < mark)
+//			max = mark;
+//	}
+//	printf("Max=%d\n", max);
+//	return 0;
+//}
+
+//#include<stdio.h>
+//int main()
+//{
+//	int n, point=0;
+//	int A = 0, B = 0, C = 0, D = 0, E = 0;
+//	scanf_s("%d", &n);
+//	printf("请输入%d个学生的成绩：", n);
+//	for (int i = 0; i <= n; i++)
+//	{
+//		scanf_s("%d", &point);
+//	if (point >= 90)
+//		A++;
+//	else if (point < 90 && point >= 80)
+//        B++;
+//	else if (point < 80 && point >= 70)
+//		C++;
+//	else if (point < 70 && point >= 60)
+//		D++;
+//	else 
+//		E++;
+//	}
+//	printf("A=%d,B=%d,C=%d,D=%d,E=%d", A, B, C, D, E);
+//	return 0;
+//}
+
+//#include<stdio.h>
+//int main()
+//{
+//	int mark, max;
+//	printf("Enter marks:");
+//	scanf_s("%d", &mark);
+//	max = mark;
+//	while (mark >= 0)
+//	{
+//		if (max < mark)
+//			max = mark;
+//		scanf_s("%d", &mark);
+//	}
+//	printf("Max=%d\n", max);
+//	return 0;
+//}
+
+//#include<stdio.h>
+//int main()
+//{
+//	int i, n, x1, x2, x;
+//	printf("Enter n:");
+//	scanf_s("%d", &n);
+//	if (n < 1 || n>46)
+//		printf("Invalid.\n");
+//	else if (n == 1)
+//		printf("%10d", 1);
+//	else
+//	{
+//		x1 = 1;
+//		x2 = 1;
+//		printf("%10d%10d", x1, x2);
+//		for (i = 3; i <= n; i++)
+//		{
+//			x = x1 + x2;
+//			printf("%10d", x);
+//			if (i % 5 == 0)
+//				printf("\n");
+//			x1 = x2;
+//			x2 = x;
+//		}
+//	}
+//	return 0;
+//}
+
+//#include<stdio.h>
+//#include<math.h>
+//int main()
+//{
+//	int count, i, k, flag, limit, m, n;
+//	printf("Enter m n:");
+//	scanf_s("%d%d", &m, &n);
+//	count = 0;
+//	if (m < 1 || n>500 || m > n)
+//		printf("Invalid.\n");
+//	else
+//	{
+//		for (k = m; k <= n; k++)
+//		{
+//			if (k < 1)
+//				flag = 0;
+//			else if (k == 2)
+//				flag = 1;
+//			else
+//			{
+//				flag = 1;
+//				limit = sqrt(k) + 1;
+//				for (i = 2; i <= limit; i++)
+//				{
+//					if (k % i == 0)
+//					{
+//						flag = 0;
+//						break;
+//					}
+//				}
+//			}
+//			if (flag == 1)
+//			{
+//				printf("%6d", k);
+//				count++;
+//				if (count % 10 == 0)
+//					printf("\n");
+//			}
+//		}
+//	}
+//	return 0;
+//}
+
+//#include<stdio.h>
+//int main()
+//{
+//	int childer, cnt, men, n, women;
+//	printf("Enter n:");
+//	scanf_s("%d", &n);
+//	cnt = 0;
+//	for (men = 0; men <= n; men++)
+//	{
+//		for (women = 0; women <= n; women++)
+//		{
+//			for (childer = 0; childer <= n; childer++)
+//			{
+//				if((men + women + childer) && (men * +women * +childer * 0.5 == n))
+//				{
+//				printf("men=%d,women=%d,childer=%d\n", men, women, childer);
+//				cnt++;
+//                 }
+//			}
+//		}
+//		if (cnt == 0)
+//			printf("None\n");
+//	}
+//	return 0;
+//}
+//
+//#include<stdio.h>
+//int main()
+//{
+//	int flag, money, n1, n2, n5;
+//	flag = 1;
+//	printf("Enter money:");
+//	scanf_s("%d", &money);
+//	for (n5 = money / 5; (n5 > 0) && (flag == 1); n5--)
+//	{
+//		for (n2 = (money - n5 * 5) / 2; (n2 >= ) && (flag = 1); n2--)
+//		{
+//			for (n1 = money - n5 * 5 - n2 * 2; (n1 >= 0) && (flag == 1); n1--)
+//			{
+//				if ((n5 * 5 + n2 * 2 + n1) == money)
+//				{
+//					printf("fen5:%d,fem2%d,fen1%d,total:%d\n", n5, n2, n1, n1 + n2 + n5);
+//					flag = 0;
+//				}
+//			}
+//		}
+//	}
+//	return 0;
+//}
