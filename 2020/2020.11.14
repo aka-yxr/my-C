@@ -1,0 +1,80 @@
+//#include<stdio.h>
+//int main()
+//{
+//	int h, m;
+//	scanf_s("%d %d", &h, &m);
+//	if (h > 0 && h <= 12)
+//		printf("Only %d:%d.  Too early to Dang.",h,m);
+//	else if (h > 12 && h < 24)
+//	{
+//		int i = 0;
+//		if (m == 0) {
+//			for (i = 0; i < h - 12; i++)
+//				printf("Dang");
+//
+//			}
+//		else
+//		{
+//			for (i = 0; i < h - 11; i++)
+//			printf("Dang");
+//		}
+//	}
+//	return 0;
+//}
+
+//#include<stdio.h>
+//int main()
+//{
+//	int a, b, c, d, a1, b1; 
+//	scanf_s("%d/%d", &a, &b);
+//	a1 = a; b1 = b;
+//	if (a > b)
+//	{
+//		c = a; a = b; b = c;//a ,b交换数值
+//		while (a != 0)
+//		{
+//			d = b % a;
+//			b = a; 
+//			a = d;
+//		}printf("%d/%d", a1 / b, b1 / b);
+//	}
+//	else
+//	{
+//		c = b; 
+//		b = a; 
+//		a = c;
+//		while (b != 0)
+//		{
+//			d = a % b;
+//			a = b; 
+//			b = d;
+//		}printf("%d/%d", a1 / a, b1 / a);
+//	}
+//	return 0;
+//}
+
+
+//#include<stdio.h>
+//int main()
+//{
+//	char ch;
+//	scanf_s("%s", &ch);//ch=getchar();
+//	while (ch != '\n')
+//	{
+//		if (ch == '-') printf("fu");
+//		else if (ch == '0') printf("ling");
+//		else if (ch == '1') printf("yi");
+//		else if (ch == '2') printf("er");
+//		else if (ch == '3') printf("san");
+//		else if (ch == '4') printf("si");
+//		else if (ch == '5') printf("wu");
+//		else if (ch == '6') printf("liu");
+//		else if (ch == '7') printf("qi");
+//		else if (ch == '8') printf("ba");
+//		else if (ch == '9') printf("jiu");
+//		scanf_s("%s", &ch);//ch=getchar();
+//		if (ch != '\n')
+//			printf(" ");
+//	}
+//	return 0;
+//}
