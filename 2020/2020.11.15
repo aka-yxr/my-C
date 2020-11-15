@@ -1,0 +1,185 @@
+//#include<stdio.h>
+//int func(int a)
+//{
+//	int b;
+//	switch (a)
+//	{
+//	case 1:b = 30; break;
+//	case 2:b = 20;
+//	case 3:b = 10;
+//	default:b = 0;
+//	}
+//	return b;
+//}
+//int main()
+//{
+//	int sum = 0;
+//	sum = func(1);
+//	printf("sum=%d", sum);
+//	return 0;
+//}
+
+//#include<stdio.h>
+//int main()
+//{
+//	int x = 3;
+//	int y = 3;
+//	switch (x % 2)
+//	{
+//	case 1:switch (y)
+//	{
+//	case 0:printf("first\n");
+//	case 1:printf("second\n");
+//	default:printf("hello\n");
+//	}
+//	case 2:printf("third\n");
+//	}
+//		return 0;
+//}
+
+//#include<stdio.h>
+//int main()
+//{
+//	int N, U, D, time = 0;
+//	scanf_s("%d %d %d", &N, &U, &D);
+//	while (N > 0)
+//	{
+//		if (N > U)
+//			time = time + 2;
+//		else
+//			time = time + 1;
+//		if (N <= U)
+//			N = N - U;
+//		else
+//			N = N - U + D;
+//	}
+//	printf("%d", time);
+//	return 0;
+//}
+
+//#include <stdio.h>
+//int main()
+//{
+//	double m = 0, n = 0, S1 = 0, S2 = 0, sum = 0;
+//	scanf_s("%lf %lf", &m, &n);
+//	int i = 0;
+//	for (i = m; i <= n; i++)
+//	{
+//		S1 = S1 + i * i;
+//		S2 = S2 + 1.0 / i;
+//		sum = S1 + S2;
+//	}
+//	printf("sum=%lf", sum);
+//	return 0;
+//}
+
+//#include<stdio.h>
+//int main()
+//{
+//	int n;
+//	for (n = 1;; n++)
+//	{
+//		if ((n % 5 == 1) && (n % 6 == 5) && (n % 7 == 4) && (n % 11 == 10))
+//		{
+//			printf("%d", n); break;
+//		}
+//	}
+//	return 0;
+//}
+
+////#include<stdio.h>
+////int main()
+////{
+////	int n;
+////	scanf_s("%d", &n);
+////	int a = (n -1) / 2;
+////	for (int i = 1; i < =a; i++)
+////	{
+////		printf("*\0");
+////		printf("\n");
+////	}
+////	for (int i = a; i <= n; i++)
+////	{
+////		printf("*\0");
+////		printf("\n");
+////	}
+////	return 0;
+////}
+
+//# include<stdio.h>
+//int main()
+//{
+//    int a, b, c, d;
+//    scanf_s("%d %d %d %d", &a, &b, &c, &d);
+//    printf("Sum = %d; ", a + b + c + d);
+//    printf("Average = %0.1f", (a + b + c + d) / 4.0);
+//    return 0;
+//}
+
+//#include<stdio.h>
+//int main()
+//{
+//	int kw = 0;
+//	double cost = 0;
+//	scanf_s("%d", &kw);
+//	if (kw <= 50&&kw>=0)
+//	{
+//		cost = 0.53 * kw;
+//		printf("cost=%.2f", cost);
+//	}
+//	else if (kw > 50)
+//	{
+//		cost = 26.5 + (kw - 50) * 0.58;
+//		printf("cost=%.2f", cost);
+//	}
+//	else 
+//		printf("Invalid Value!")
+//	return 0;
+//}
+
+//#include<stdio.h>
+//int main()
+//{
+//	int  m = 0, n = 0;
+//	double s1 = 0, s2 = 0, sum = 0;
+//	scanf_s("%d %d", &m, &n);
+//	for (int i = m; i <= n; i++)
+//	{
+//		s1 = s1 + i * i;
+//		s2 = s2 + 1.0 / i;
+//		sum = s1 + s2;
+//	}
+//	printf("sum=%lf", sum);
+//	return 0;
+//}
+
+//#include<stdio.h>
+//int main()
+//{
+//	int n = 0, flag = 1, fenmu=1;
+//	double sum=0;
+//	scanf_s("%d", &n);
+//	for (int i = 1; i <= n; i++)
+//	{
+//		sum = sum + i * 1.0*flag / fenmu;
+//			flag = -flag;
+//			fenmu = fenmu + 2;
+//	}
+//	printf("sum=%.3f", sum);
+//	return 0;
+//}
+
+//#include<stdio.h>
+//#include<math.h>
+//int main()
+//{
+//	int n=0;
+//	double sum = 0;
+//	scanf_s("%d", &n);
+//	for (int i = 1; i <= n; i++)
+//	{
+//		sum = sqrt(i) + sum;
+//	}
+//	printf("sum=%lf", sum);
+//	return 0;
+//}
