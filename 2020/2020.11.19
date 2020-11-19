@@ -1,0 +1,187 @@
+//#include<stdio.h>
+//int main()
+//{
+//	printf("%d", printf("%d", printf("%d", 43)));
+//	return 0;
+//}
+
+//#include<stdio.h>
+//int main()
+//{
+//    int N, U, D, time = 0;
+//    scanf_s("%d %d %d", &N, &U, &D);
+//   while(N>0)
+//    {
+//       if (N > U)
+//       {
+//           time = time + 2;
+//           N = N - U + D;
+//        }
+//       else
+//       {
+//           time = time + 1;
+//           N = N - U;
+//       }  
+//    }
+//printf("%d", time);
+//return 0;
+//}
+
+//#include<stdio.h>//递归
+//int my_strlen(char* str)
+//{
+//	if (*str != '\0')
+//		return 1 + my_strlen(str + 1);
+//	else
+//		return 0;
+//}
+//
+//int main()
+//{
+//	char arr[] = "bit";
+//	int num = my_strlen(arr);
+//	printf("num=%d\n", num);
+//	return 0;
+//}
+
+//#include<stdio.h>
+//int my_strlen(char* str)
+//{
+//	int count = 0;
+//	while (*str != '\0')
+//	{
+//		count++;
+//		str++;
+//	}
+//	return count;
+//}
+//int main()
+//{
+//	char arr[] = "bit";
+//	int num = my_strlen(arr);
+//	printf("num=%d\n", num);
+//	return 0;
+//}
+
+//#include<stdio.h>
+//void print(int m)
+//{
+//	if (m > 9)
+//		print(m / 10);
+//	printf("%d ", m % 10);
+//}
+//int main()
+//{
+//	int n;
+//	scanf_s("%d", &n);
+//	print(n);
+//	return 0;
+//}
+
+//#include<stdio.h>
+//int main(void)
+//{
+//	int n;
+//	scanf_s("%d", &n);
+//	int m = (n + 1) / 2;
+//
+//	for (int i = 1; i <= m; i++)
+//	{
+//		for (int j = 1; j <= m - i; j++)
+//		{
+//			printf("  ");
+//		}
+//		for (int k = 1; k <= 2 * i - 1; k++)
+//		{
+//			printf("* ");
+//		}
+//		printf("\n");
+//	}
+//
+//	for (int i = 1; i <= m; i++)
+//	{
+//		for (int j = 1; j <= i; j++)
+//		{
+//			printf("  ");
+//		}
+//		for (int k = 1; k <= n - 2 * i; k++)
+//		{
+//			printf("* ");
+//		}
+//		printf("\n");
+//	}
+//	return 0;
+//}
+
+//#include <stdio.h>//有问题
+//#include<math.h>
+//int factorsum(int number);
+//void PrintPN(int m, int n);
+//
+//int main()
+//{
+//    int m, n;
+//
+//    scanf_s("%d %d", &m, &n);
+//    if (factorsum(m) == m) printf("%d is a perfect number\n", m);
+//    if (factorsum(n) == n) printf("%d is a perfect number\n", n);
+//    PrintPN(m, n);
+//
+//    return 0;
+//}
+//int factorsum(int number)//判断是不是完数，并返回。例 6=1+2+3；
+//{
+//    int i = 0, sum = 1, lim = sqrt(number);
+//    for (i = 2; i <= lim; i++)
+//    {
+//        if (number % i == 0)
+//            sum = sum + i + number / i;
+//    }
+//    return sum;
+//}
+//void PrintPN(int m, int n) 
+//{
+//    int i = 0, flag=0;
+//    for (i = m; i <= n; i++)
+//    {
+//        if (factorsum(i) == i)
+//        {
+//            if (flag)
+//             printf("\n");
+//             flag = 1;
+//             printf("%d = 1", i);
+//             for (int j = 2; j < i; j++) 
+//             {
+//                if (i % j == 0)
+//                    printf(" + %d", j);
+//            }
+//        }
+//    }
+//    if (!flag)printf("No perfect number");
+//}
+    
+//
+//#include<stdio.h>
+//int Fib(int n)
+//{
+//    int a = 1;
+//    int b = 1;
+//    int c = 1;
+//    while (n > 2)
+//    {
+//        c = a + b;
+//        a = b;
+//        b = c;
+//        n--;
+//    }
+//    return c;
+//}
+//int main()
+//{
+//    int n = 0;
+//    int rat = 0;
+//    scanf_s("%d", &n);
+//    rat = Fib(n);
+//    printf("rat=%d", rat);
+//    return 0;
+//}
