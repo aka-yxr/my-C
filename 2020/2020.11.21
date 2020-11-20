@@ -1,0 +1,129 @@
+//#include <stdio.h>
+//
+//#define MAXN 10
+//
+//int even(int n);
+//int OddSum(int List[], int N);
+//
+//int main()
+//{
+//    int List[MAXN], N, i;
+//
+//    scanf_s("%d", &N);
+//    printf("Sum of ( ");
+//    for (i = 0; i < N; i++) {
+//        scanf_s("%d", &List[i]);
+//        if (even(List[i]) == 0)
+//            printf("%d ", List[i]);
+//    }
+//    printf(") = %d\n", OddSum(List, N));
+//
+//    return 0;
+//}
+//int even(int n)//判断输入的数字是奇数还是偶数；
+//{
+//    if (n % 2 == 0)//偶数，返回1；奇数返回0；
+//        return 1;
+//    else
+//        return 0;
+//}
+//int OddSum(int List[], int N)
+//{
+//    int i = 0, sum = 0;//定义i为循环变量，sum为求一系列数字中奇数的和
+//    for (i = 0; i < N; i++)
+//
+//        if (even(List[i]) == 0)
+//            sum = sum + List[i];
+//
+//    return sum;
+//}
+
+
+//#include <stdio.h>
+//
+//int CountDigit(int number, int digit);
+//
+//int main()
+//{
+//    int number, digit;
+//
+//    scanf_s("%d %d", &number, &digit);
+//    printf("Number of digit %d in %d: %d\n", digit, number, CountDigit(number, digit));
+//
+//    return 0;
+//}
+//
+//int CountDigit(int number, int digit)
+//{
+//    int  count = 0, a = 0;
+//    if (number == 0 && digit == 0)
+//        return 1;
+//    else {
+//        while (number != 0)
+//        {
+//            if (number < 0)
+//                number = -number;
+//            else
+//            {
+//                a = number % 10;//得到最后一位
+//                if (a == digit)
+//                {
+//                    count++;
+//                }
+//                number = number / 10;
+//            }
+//
+//        }
+//        return count;
+//    }
+//
+//}
+
+
+////  再次分析后发现不需要#include<math.h>  “//感觉需要一个sqrt 没有这个的话 遍历到number/2  比如说 36 的 4*9=36 9*4=30；”  
+//int factorsum(int number) {        			//会造成重复相加 
+//	int sum = 1;
+//	for (int i = 2; i <= (number / 2); i++) {
+//		if (number % i == 0) {
+//			sum = sum + i;		 // 这个式子在 循环number/2条件下 可以保证不重复相加； 
+//		}                     //在有#include<math.h>时 循环到sqrt(number)时  使用sum=sum+i+（number/i）;也可保证不循环相加	
+//	}
+//	return sum;
+//}
+//void PrintPN(int m, int n) {
+//
+//	int sum = 1;
+//	int cnt = 0;  //记录完数的数量 cnt==0;输出 No perfect number 
+//	if (m == 1) {
+//		printf("1 = 1\n");//1一定是完数
+//		m = m + 1;
+//		cnt++;//  这里需要++； 
+//	}
+//
+//	for (int x = m; x <= n; x++) {  //从m遍历到n 
+//
+//		for (int i = 2; i <= (x / 2); i++) {
+//			if (x % i == 0) {
+//				sum = sum + i;
+//			}
+//		}
+//
+//		if (sum == x) {
+//			printf("%d = 1", x);
+//			for (int i = 2; i <= (x / 2); i++) {  //按序输出因子 只需遍历到一半 因为最小因子除了1 就是2了 
+//				if (x % i == 0) {
+//					printf(" + %d", i);  	//这里遍历 到x/2 为了按序输出 
+//				}                             //一开始感觉需要数组存储出现的因子 排序后输出； 
+//			}								// 但是数组是后面的内容； 所以 不想用 						
+//			printf("\n");                  // 分析后发现 只要按序输出到x/2就能包含所有因子 并且是升序的 
+//			cnt++;
+//		}
+//
+//		sum = 1;
+//	}
+//
+//	if (cnt == 0) {
+//		printf("No perfect number");
+//	}
+//
+//}
