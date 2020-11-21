@@ -1,0 +1,184 @@
+//#include<stdio.h>
+//int main()
+//{
+//    int a1, a2, a5, n, count, x;
+//    count = 0;
+//    scanf_s("%d", &n);
+//    for (a1 = 1; a1 <= n; a1++) 
+//    {
+//        for (a2 = 1; a2 <= n; a2++) 
+//        {
+//                if (5 * a5 + 2 * a2 + a1 == n) 
+//                {
+//                    count++;
+//                    x = a1 + a5 + a2;
+//                    printf("fen5:%d, fen2:%d, fen1:%d, total:%d\n", a5, a2, a1, x);
+//                }
+//        }
+//    }
+//    printf("count = %d", count);
+//    return 0;
+//}
+
+//#include<stdio.h>
+//int fib(int n);
+//int main()
+//{
+//	int n;
+//	scanf_s("%d", &n);
+//	printf("%d\n", fib(n));
+//	return 0;
+//}
+//int fib(int n)
+//{
+//	int a = 1, b = 1, c = 1;
+//	while (n > 2)
+//	{
+//		c = a + b;
+//		a = b;
+//		b = c;
+//		n--;
+//	}
+//	return c;
+//}
+
+//#include <stdio.h>
+//int fib(int n);
+//int main()
+//{
+//    int n;
+//    scanf_s("%d", &n);
+//    printf("%d\n", fib(n));
+//    return 0;
+//}
+//int fib(int n)
+//{
+//    if (n <= 2)
+//        return 1;
+//    else
+//        return fib(n - 1) + fib(n - 2);
+//}
+
+//#include <stdio.h>
+//
+//int even(int n);
+//
+//int main()
+//{
+//    int n;
+//
+//    scanf_s("%d", &n);
+//    if (even(n))
+//        printf("%d is even.\n", n);
+//    else
+//        printf("%d is odd.\n", n);
+//
+//    return 0;
+//}
+//int even(int n)
+//{
+//    if (n % 2 == 0)
+//        return 1;
+//    else
+//        return 0;
+//}
+
+
+//#include <stdio.h>
+//
+//int factorsum(int number);
+//void PrintPN(int m, int n);
+//
+//int main()
+//{
+//    int m, n;
+//
+//    scanf_s("%d %d", &m, &n);
+//    if (factorsum(m) == m) printf("%d is a perfect number\n", m);
+//    if (factorsum(n) == n) printf("%d is a perfect number\n", n);
+//    PrintPN(m, n);
+//
+//    return 0;
+//}
+//int factorsum(int number)//判断是不是完数，并返回完数的因子和。例 6=1+2+3；
+//{
+//    int i = 0, sum = 0;
+//    for (i = 1; i <= number / 2; i++)//不会有超过number/2 的因子，所有i<=number/2，就足够了。
+//    {
+//        if (number % i == 0)//成立时，i就是number的因子
+//            sum = sum + i;//因子相加的和。
+//    }        return sum;//返回各因子相加的和
+//}
+//void PrintPN(int m, int n)  //逐行输出给定范围[m, n]内每个完数的因子累加形式的分解式.
+//    //格式为“完数 = 因子1 + 因子2 + ... + 因子k”，其中完数和因子均按递增顺序给出。如果给定区间内没有完数，则输出一行“No perfect number”。
+//{
+//    int i, j, count = 0;//i，j 都是循环变量，count用来统计完数数量，当count=0时，输出No perfect number。
+//    for (i = m; i <= n; i++)//从m到n，寻找完数。
+//    {
+//        if (factorsum(i) != 0)//借用上面的函数来判断是不是完数。
+//        {
+//            int sum = 0;//上一个函数返回来的sum=number，这里需要把sum赋值为0，方便后续计算。
+//            count++;//是完数，count增加
+//            printf("%d = ", i);//打印 完数=
+//            if (i == 1)//如果i等于1，打印1
+//                printf("%d", i);
+//            for (j = 1; j <= i / 2; j++)//此循环用来找完数的因子。
+//            {
+//                if (i % j == 0)
+//                {
+//                    printf("%d", j);//打印每一个因子
+//                    sum = sum + j;//这里sum是把各因子相加，用于下一步。
+//                    if (sum != i)//当sum不等于i时,他就会在打印每一个因子后面打印一个+号
+//                        printf(" + ");//注意空格。
+//                }
+//            }
+//            printf("\n");//打印完一个完数，换行，打印下一个完数；
+//        }
+//    }
+//    if (count == 0)
+//        printf("No perfect number");
+//}
+
+//#include <stdio.h>
+//#include <math.h>
+//
+//int search(int n);
+//
+//int main()
+//{
+//    int number;
+//
+//    scanf_s("%d", &number);
+//    printf("count=%d\n", search(number));
+//
+//    return 0;
+//}
+//int search(int n)
+//{
+//    int a, b, c, i, count = 0, j;
+//    for (a = 1; a <= 9; a++)
+//    {
+//        for (b = 0; b <= 9; b++)
+//        {
+//            for (c = 0; c <= 9; c++)
+//            {
+//                i = a * 100 + b * 10 + c;
+//                if (i >= 101 && i <= n)
+//                {
+//                    if (a == b || b == c || c == a)
+//                    {
+//                        for (j = 10;j<=n; j++)
+//                        {
+//                            if (j * j == i)
+//                            {
+//                                count++;
+//                            }
+//
+//                        }
+//                    }
+//                }
+//            }
+//        }
+//    }
+//    return count;
+//}
