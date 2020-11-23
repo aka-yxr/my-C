@@ -1,0 +1,200 @@
+//#include<stdio.h>//统计字符
+//int main()
+//{
+//    int letter = 0, blank = 0, other = 0, digit = 0;
+//    char ch;
+//    for (int i = 1; i <= 10; i++)
+//    {
+//        ch = getchar();
+//        if ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z'))
+//            letter++;
+//        else if (ch >= '0' && ch <= '9')
+//            digit++;
+//        else if (ch == ' ' || ch == '\n')
+//            blank++;
+//        else
+//            other++;
+//    }
+//    printf("letter = %d, blank = %d, digit = %d, other = %d", letter, blank, digit, other);
+//    return 0;
+//}
+
+//#include<stdio.h>//输出21世纪中截止某个年份以来的所有闰年年份。
+//int main()
+//{
+//    int n, i = 0, count = 0;
+//    scanf_s("%d", &n);
+//    if (n <= 2000 || n > 2100)
+//        printf("Invalid year!");
+//    else
+//    {
+//        for (i = 2001; i <= n; i++)
+//        {
+//            if ((i % 4 == 0 && i % 100 != 0) || i % 400 == 0)
+//                printf("%d\n", i);
+//            count++;
+//        }
+//       if(count==0)
+//        printf("None");
+//    }
+//    return 0;
+//}
+
+//#include<stdio.h>//成绩转换
+//int main()
+//{
+//    int point;
+//    scanf_s("%d", &point);
+//    if (point >= 90)
+//        printf("A");
+//    else if (point < 90 && point >= 80)
+//        printf("B");
+//    else if (point < 80 && point >= 70)
+//        printf("C");
+//    else if (point < 70 && point >= 60)
+//        printf("D");
+//    else if (point < 60)
+//        printf("E");
+//    return 0;
+//}
+
+//#include<stdio.h>//查询水果价格。
+//int main()
+//{
+//    printf("[1] apple\n[2] pear\n[3] orange\n[4] grape\n[0] exit\n");
+//    int a, k;
+//    for (a = 0; a <= 4; a++)
+//    {
+//        scanf_s("%d", &k);
+//        if (!k)
+//            break;
+//        switch (k)
+//        {
+//        case 1:printf("price = 3.00\n"); break;
+//        case 2:printf("price = 2.50\n"); break;
+//        case 3:printf("price = 4.10\n"); break;
+//        case 4:printf("price = 10.20\n"); break;
+//        default:printf("price = 0.00\n"); break;
+//        }
+//    }
+//    return 0;
+//}
+
+//#include<stdio.h>//判断三个数的大小。
+//int main()
+//{
+//    int a, b, c, temp;
+//    scanf_s("%d %d %d", &a, &b, &c);
+//    if (a > b)
+//    {
+//        temp = a;
+//        a = b;
+//        b = temp;
+//    }
+//    if (a > c)
+//    {
+//        temp = a;
+//        a = c;
+//        c = temp;
+//    }
+//    if (b > c)
+//    {
+//        temp = b;
+//        b = c;
+//        c = temp;
+//    }
+//    printf("%d->%d->%d", a, b, c);
+//    return 0;
+//}
+
+//#include <stdio.h>//求a，aa，aaaaaa···的和
+//
+//int fn(int a, int n);
+//int SumA(int a, int n);
+//
+//int main()
+//{
+//    int a, n;
+//
+//    scanf_s("%d %d", &a, &n);
+//    printf("fn(%d, %d) = %d\n", a, n, fn(a, n));
+//    printf("s = %d\n", SumA(a, n));
+//
+//    return 0;
+//}
+//int fn(int a, int n)//该函数要输出的是n个a，即aaaaaa...（n个）
+//{
+//    int i = 0, sum = 0, b = 1;
+//    for (i = 1; i <= n; i++)//循环变量i，
+//    {
+//        sum += a;//sum用来存储每次a相加的值
+//        a = a * 10;//可通过特殊例子推导一般式
+//    }
+//    return sum;
+//}
+//int SumA(int a, int n)//该函数是输出a+aa+aaa+...+aaaaaaaaa..（n个a）的和
+//{
+//    int i; double num = 0, j = 1;//同样，i是循环变量，num是用来存储每次累加的值
+//    for (i = 1; i <= n; i++)
+//    {
+//        num += fn(a, i);//如例子，a=2，n=3，应该是2+22+222；上一个函数是会输出n个a即a，aa，aaa...这里可以借用上一个函数的效果，来完成这个函数的输出.
+//    }
+//    return num;
+//}
+
+//
+//#include<stdio.h>//限速罚款。
+//int main()
+//{
+//    int a, b;//a是车速，b是限速
+//    scanf_s("%d %d", &a, &b);
+//    double x = (a - b) * 100.0 / b;
+//    if (x < 10)
+//        printf("OK\n");
+//    else if (x >= 10 && x < 50)
+//        printf("Exceed %.0lf%%. Ticket 200\n", x);
+//    else
+//        printf("Exceed %.0lf%%. License Revoked\n", x);
+//    return 0;
+//}
+//
+//#include<stdio.h>
+//int main()
+//{
+//    float a = 10.0;
+//    int c;
+//    float b;
+//    scanf_s("%f%d", &b, &c);
+//    if (b > 3 && b <= 10)
+//        a += (b - 3) * 2;
+//    if (b > 10)
+//        a += (b - 10) * 3 + 14;
+//    a += (c / 5) * 2;
+//    c = a + 0.5;
+//    printf("%d", c);
+//    return 0;
+//}
+
+//#include<stdio.h>//统计学生成绩
+//int main()
+//{
+//	int n, point, i = 0;
+//	int A = 0, B = 0, C = 0, D = 0, E = 0;
+//	scanf_s("%d", &n);
+//	for (i = 0; i < n; i++)
+//	{
+//		scanf("%d", &point);
+//		if (point >= 90)
+//			A++;
+//		else if (point < 90 && point >= 80)
+//			B++;
+//		else if (point < 80 && point >= 70)
+//			C++;
+//		else if (point < 70 && point >= 60)
+//			D++;
+//		else
+//			E++;
+//	}
+//	printf("%d %d %d %d %d", A, B, C, D, E);
+//	return 0;
+//}
