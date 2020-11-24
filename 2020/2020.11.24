@@ -1,0 +1,167 @@
+//#include <stdio.h>//判断素数.
+//int factorsum(int number);
+//void PrintPN(int m, int n);
+//
+//int main()
+//{
+//    int m, n;
+//
+//    scanf_s("%d %d", &m, &n);
+//    if (factorsum(m) == m) printf("%d is a perfect number\n", m);
+//    if (factorsum(n) == n) printf("%d is a perfect number\n", n);
+//    PrintPN(m, n);
+//
+//    return 0;
+//}
+//int factorsum(int number)//判断是不是完数，并返回完数的因子和。例 6=1+2+3；
+//{
+//    int i = 0, sum = 0;
+//    for (i = 1; i <= number / 2; i++)//不会有超过number/2 的因子，所有i<=number/2，就足够了。
+//    {
+//        if (number % i == 0)//成立时，i就是number的因子
+//            sum = sum + i;//因子相加的和。
+//    }
+//    return sum;//返回各因子相加的和
+//}
+//void PrintPN(int m, int n)  //逐行输出给定范围[m, n]内每个完数的因子累加形式的分解式.
+//    //格式为“完数 = 因子1 + 因子2 + ... + 因子k”，其中完数和因子均按递增顺序给出。如果给定区间内没有完数，则输出一行“No perfect number”。
+//{
+//    int i=0, j, count = 0;//i，j 都是循环变量，count用来统计完数数量，当count=0时，输出No perfect number。
+//    if (i == 1)//如果i等于1，打印1
+//        printf("%d", i);
+//    for (i = m; i <= n; i++)//从m到n，寻找完数。
+//    {
+//        if (factorsum(i) == i)//借用上面的函数来判断是不是完数。
+//        {
+//            int sum = 0;//上一个函数返回来的sum=number，这里需要把sum赋值为0，方便后续计算。
+//            count++;//是完数，count增加
+//            printf("%d = ", i);//打印 完数=
+//
+//            for (j = 1; j <= i / 2; j++)//此循环用来找完数的因子。
+//            {
+//                if (i % j == 0)
+//                {
+//                    printf("%d", j);//打印每一个因子
+//                    sum = sum + j;//这里sum是把各因子相加，用于下一步。
+//                    if (sum != i)//当sum不等于i时,他就会在打印每一个因子后面打印一个+号
+//                        printf(" + ");//注意空格。
+//                }
+//            }
+//            printf("\n");//打印完一个完数，换行，打印下一个完数；
+//        }
+//    }
+//    if (count == 0)
+//        printf("No perfect number");
+//}
+
+
+//#include<stdio.h>//求三角形面积
+//#include<math.h>
+//int main()
+//{
+//	double x1, y1, x2, y2, x3, y3;
+//	scanf_s("%lf%lf%lf%lf%lf%lf", &x1, &y1, &x2, &y2, &x3, &y3);
+//	double a, b, c, A, L;
+//	a = sqrt((x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2));
+//	b = sqrt((x1 - x3) * (x1 - x3) + (y1 - y3) * (y1 - y3));
+//	c = sqrt((x3 - x2) * (x3 - x2) + (y3 - y2) * (y3 - y2));
+//	if (a + b > c && a + c > b && b + c > a)
+//	{
+//		L = a + b + c;
+//		double s = L / 2.0;
+//		A = sqrt(s * (s - a) * (s - b) * (s - c));
+//		printf("L = %.2f, A = %.2f\n", L, A);
+//	}
+//	else
+//		printf("Impossible");
+//	return 0;
+//}
+
+//#include<stdio.h>//求给定精度的简单交错序列部分和 
+//#include<math.h>
+//int main()
+//{
+//    double eps, sum = 0, n = 1.0;
+//    int i=1, flag = 1;
+//    scanf_s("%lf", &eps);
+//    if (eps >= 1)
+//        printf("sum = %.6f", n);
+//    else
+//    {
+//        while (fabs(n) > eps)
+//        {
+//            n = 1.0 * flag / i;
+//            sum += n;
+//            i += 3;
+//            flag = -flag;
+//        }
+//        printf("sum = %.6f", sum);
+//    }
+//    return 0;
+//}
+
+//#define _CRT_SECURE_NO_WARNINGS//与电脑玩猜数游戏。
+//#include<stdio.h>
+//#include<stdlib.h>
+//#include<time.h>
+//int main()
+//{
+//	int count = 0, flag, mynumber, yournumber=0;
+//	srand(time(0));
+//	mynumber = rand() % 100 + 1;
+//	flag = 0;
+//	while (count < 7)
+//	{
+//		printf("Enter yournumber:");
+//		scanf("%d", &yournumber);
+//		count++;
+//		if (yournumber == mynumber)
+//		{
+//			printf("Lucky you!\n");
+//			flag = 1; break;
+//		}
+//		else if (yournumber > mynumber)
+//			printf("Too big\n");
+//		else
+//			printf("Too small\n");
+//	}
+//	if (flag == 0)
+//		printf("Game over!\n");
+//	return 0;
+//}
+
+//#include<stdio.h>//自己跟自己玩猜数游戏，
+//int main()
+//{
+//    int m, n, i = 0, yournumber = 0, flag = 1;
+//    scanf_s("%d %d", &m, &n);
+//    for (i = 0; i < n; i++)
+//    {
+//        scanf_s("%d", &yournumber);
+//        if (yournumber > m)
+//            printf("Too big\n");
+//        else if (yournumber == m)
+//        {
+//            if (i == 1)
+//            {
+//                printf("Bingo!\n"); flag = 0; break;
+//            }
+//            else if (i > 1 && i <= 3)
+//            {
+//                printf("Lucky You!\n"); flag = 0; break;
+//            }
+//            else if (i > 3)
+//            {
+//                printf("Good Guess!\n"); flag = 0; break;
+//            }
+//
+//        }
+//        else if (yournumber < 0)
+//            break;
+//        else if (yournumber < m && yournumber>0)
+//            printf("Too small\n");
+//    }
+//    if (flag == 1)
+//        printf("Game Over\n");
+//    return 0;
+//}
