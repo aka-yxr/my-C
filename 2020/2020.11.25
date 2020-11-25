@@ -1,0 +1,44 @@
+//#include <stdio.h>//使用函数求余弦函数的近似值
+//#include <math.h>
+//double funcos(double e, double x);
+//int main()
+//{
+//    double e, x;
+//    scanf_s("%lf %lf", &e, &x);
+//    printf("cos(%.2f) = %.6f\n", x, funcos(e, x));
+//    return 0;
+//}
+//double funcos(double e, double x)
+//{
+//    int i = 0, flag = -1;//循环变量i ，flag用来判断下一项的正负。flag=-1,是因为我这个循环从第二项开始。
+//    double num = 1, sum = 1, fenzi = 1, fenmu = 1;//num就是每一项的值，用于和e作比较，sum就是cos（x）的近似值。
+//    for (i = 2; num > e; i += 2)//如果输入e大于1的时候，输出的就应该是1.所以，循环应该从i=2开始，
+//    {
+//        fenzi = fenzi * x * x;//分子de下一项都是上一项  *x*x.
+//        fenmu = fenmu * i * (i - 1); //从第二项开始，下一项与上一项之间差两个数，如4！=4*3*2*1, 2！=2*1刚好差了个4*3,。可从特殊例子里推出一般表达式。
+//        num = fenzi * 1.0 / fenmu;//这一步是为了for循环的判断，当num＞e的时候，退出循环
+//        sum += flag * num;//sum=sum+flag*num；
+//        flag = -flag;
+//    }
+//    return sum;//最后返回sum。
+//}
+
+//#include<stdio.h>//只计算字符串长度，不计算空格数。
+//int main()
+//{
+//    char ch;
+//    int count = 0,word = 0;
+//    ch = getchar();
+//    while ((ch = getchar()) != '\n')
+//    {
+//        while (ch!=' '&&ch!='\n')
+//        {
+//            count++;
+//            ch = getchar();
+//        }
+//        printf("%d ", count);
+//        if (ch == ' ')
+//            word=count = 0;
+//    }
+//    return 0;
+//}
