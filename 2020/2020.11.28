@@ -1,0 +1,211 @@
+//#include <stdio.h>//输出每个月的天数 
+//int MonthDays(int year, int month);
+//int main()
+//{
+//    int ndays, month, year;
+//    scanf_s("%d", &year);
+//    for (month = 1; month <= 12; month++) 
+//{
+//        ndays = MonthDays(year, month);
+//        printf("%d ", ndays);
+//    }
+//    return 0;//主函数中的循环，目的是输出每个月份的天数，所以子函数中应该返回的是每一个月份的天数。
+//}
+//int MonthDays(int year, int month)//判断输入年份是不是闰年，并输出这一年每个月的天数。
+//{
+//    switch (month)
+//    {
+//    case 1:case 3:case 5:case 7:case 8:case 10:case 12:
+//        return 31;
+//    case 4:case 6:case 9:case 11:
+//        return 30;
+//    case 2:
+//        if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0)
+//            return 29;
+//        else
+//            return 28;
+//    }
+//}
+
+//#include <stdio.h>//使用函数验证哥德巴赫猜想.
+//#include <math.h>
+//int prime(int p);
+//void Goldbach(int n);
+//int main()
+//{
+//    int m, n, i, cnt;
+//    scanf_s("%d %d", &m, &n);
+//    if (prime(m) != 0) printf("%d is a prime number\n", m);
+//    if (m < 6) m = 6;
+//    if (m % 2) m++;
+//    cnt = 0;
+//    for (i = m; i <= n; i += 2) {
+//        Goldbach(i);
+//        cnt++;
+//        if (cnt % 5) printf(", ");
+//        else printf("\n");
+//    }
+//    return 0;
+//}
+//int prime(int p)
+//{
+//
+//    int i;
+//    if (p <= 1)
+//        return 0;
+//    if (p == 2)
+//        return 1;
+//    for (i = 2; i <= sqrt(p) + 1; i++)
+//    {
+//        if (p % i == 0)
+//            return 0;
+//    }
+//    return 1;
+//}
+//void Goldbach(int n)
+//{
+//    int j = 0, num = 0;
+//    for (j = 2; j <= n/2; j++)
+//    {
+//        if (prime(j) == 1)
+//        {
+//            num = n - j;
+//            if (prime(num) == 1)
+//            {
+//                printf("%d=%d+%d", n, j, num); break;
+//            }
+//        }
+//    }
+//}
+
+
+//#include <stdio.h>//求排列数 
+//double fact(int n);
+//int main(void)
+//{
+//    int m, n;
+//    double result;
+//    scanf_s("%d%d", &m, &n);
+//    if (m > 0 && n > 0 && m <= n) {
+//        result = fact(n) / fact(n - m);
+//        printf("result = %.0f\n", result);
+//    }
+//    return 0;
+//}
+//double fact(int n)//常规方法
+//{
+//    double sum = 1;
+//    for (int i = 1; i <= n; i++)
+//    {
+//        sum *= i;
+//    }
+//    return sum;
+//}
+
+//double fact(int n)//递归函数
+//{
+//    double sum = 1;
+//    if (n == 1 || n == 0)
+//        return 1;
+//    else
+//        return sum = n * fact(n - 1);
+
+//
+//#include <stdio.h>
+//int main()
+//{
+//	char ch;
+//	int count = 0;//统计字符数量
+//	int flag = 1;           //flag用来统计是否需要输出空格
+//	scanf_s("%c", &ch);
+//	while (ch != '\n')   
+//	{
+//		if (ch == ' ')//当遇到空格时，
+//		{
+//			if (count != 0)//字符数量不等于0的时候
+//			{
+//				if (flag == 1)
+//				{
+//					printf("%d ", count);
+//					flag = 0;
+//				}
+//				else
+//					printf("%d ", count);
+//				count = 0;
+//			}
+//		}
+//		else//ch！=空格的时候，count++，来计算字符数量
+//			count++;
+//		scanf_s("%c", &ch);
+//
+//	}
+//	if (count != 0)          
+//	{
+//		if (flag == 1)
+//			printf("%d ", count);
+//		else
+//			printf("%d ", count);
+//	}
+//	return 0;
+//}
+
+//#include<iostream>
+//#include<string>
+//using namespace std;
+//
+//int main()
+//{
+//    string s;
+//    while (cin >> s) 
+//    {
+//        cout << s.length() << ' ';
+//        if (getchar() == '\n') {
+//            break;
+//        }
+//    }
+//    return 0;
+//}
+
+//#include<stdio.h>//strlen
+//#include<string.h>
+//int main()
+//{
+//	char ch[1000];
+//	int flag = 0;
+//	while (scanf_s("%s"<ch))
+//	{
+//		printf("%d ", strlen(ch));
+//		flag = 1;
+//		if (getchar() == '\n')
+//			break;
+//	}
+//	if (flag == 0)
+//		printf("0 ");
+//	return 0;
+//}
+
+//#include <stdio.h>
+//int main()
+//{
+//	char ch;
+//	int count = 0;//统计字符数量      
+//	ch = getchar();
+//	while (ch != '\n')
+//	{
+//		if (ch == ' ')//当遇到空格时，
+//		{
+//			if (count != 0)//字符数量不等于0的时候
+//			{
+//				printf("%d ", count);//输出字符穿长度。
+//				count = 0;
+//			}
+//		}
+//		else//ch！=空格的时候，count++，来计算字符数量
+//			count++;
+//		ch = getchar();
+//
+//	}
+//	if (count != 0)//输出最后一个字符串。
+//		printf("%d \n", count);
+//	return 0;
+//}
