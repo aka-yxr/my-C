@@ -1,0 +1,253 @@
+//#define _CRT_SECURE_NO_WARNINGS
+//#include<stdio.h>//找零钱
+//int main()
+//{
+//	int flag=1, money=0, n1, n2, n5;
+//	printf("Enter money:");
+//	scanf("%d", (int)money);
+//	for (n5 = money / 5; n5 >= 0 && flag; n5--)
+//	{
+//		for (n2 = (money - n5 * 5) / 2; (n2 >= 0) && flag; n2--)
+//		{
+//			for (n1 = money - n2 * 5 - n2 * 2; (n1 >= 0) && flag; n1--)
+//			{
+//				if (n5 * 5 + n2 * 2 + n1 == money)
+//				{
+//					printf("fen5:%d,fen2:%d,fen1:%d,total:%d", n5, n2, n1, n5 + n2 + n1);
+//					flag = 0;
+//				}
+//			}
+//		}
+//	}
+//	return 0;
+//}
+//#include<stdio.h>//猴子吃桃问题。
+//int main()
+//{
+//    int N, day, x1, x2 = 1;
+//    scanf_s("%d", &N);
+//    day = N - 1;
+//    while (day > 0)
+//    {
+//        x1 = (x2 + 1) * 2;
+//        x2 = x1;
+//        day--;
+//    }
+//    printf("%d", x1);
+//    return 0;
+//}
+
+
+//#include<stdio.h>//兔子繁衍问题
+//int main()
+//{
+//    int N, x1 = 1, x2 = 1, x, i = 0;
+//    scanf_s("%d", &N);
+//    if (N == 1)
+//        printf("1");
+//    else
+//    {
+//        for (i = 2; x2 < N; i++)//根据规律可类比斐波那契数列。
+//        {
+//            x = x1 + x2;
+//            x1 = x2;
+//            x2 = x;
+//        }
+//        printf("%d", i);
+//    }
+//    return 0;
+//}
+
+//#include <stdio.h>//调用函数，打印空心的数字金字塔
+//void hollowPyramid(int n);
+//int main()
+//{
+//    int n;
+//    scanf_s("%d", &n);
+//    hollowPyramid(n);
+//    return 0;
+//}
+//void hollowPyramid(int n) {
+//    int i, j;
+//    for (i = 1; i <= n; i++) //换行
+//    {
+//        for (j = 1; j <= 2 * n - 1; j++) //数字和空格
+//        {
+//            if (i == n) printf("%d", i);//最后一行，有2n-1个数字
+//            else {
+//                if (j == n - i + 1) //前面的那个数字
+//                    printf("%d", i);
+//                else if (j == n + i - 1) //后面的那个数字
+//                    printf("%d", i);
+//                else if (j < n - i + 1 || (j > n - i + 1 && j < n + i - 1)) 
+//                    printf(" ");//空格区域
+//            }
+//        }
+//        printf("\n");//换行
+//    }
+//}
+
+//#include<stdio.h>//求e的近似值。
+//int main()
+//{
+//	int i, n;
+//	double sum = 1, fact = 1;
+//	scanf_s("%d", &n);
+//	for (i = 1; i <= n; i++)
+//	{
+//		fact = fact * i;
+//		sum = sum + 1.0 / fact;
+//	}
+//	printf("%.8f", sum);
+//	return 0;
+//}
+
+//#include<stdio.h>//找出最小值、
+//int main()
+//{
+//	int n, i, number=0, min;
+//	scanf_s("%d", &n);
+//	scanf_s("%d", &number);
+//	min = number;
+//	for (i = 1; i < n; i++)
+//	{
+//		scanf_s("%d", &number);
+//		if (number < min)
+//			min = number;
+//	}
+//	printf("min = %d", min);
+//	return 0;
+//}
+
+//#include<stdio.h>//统计素数并求和//
+//#include<math.h>
+//int prime(int p);
+//int main()
+//{
+//    int m, n, i, count = 0, sum = 0;
+//	scanf_s("%d %d", &m, &n);
+//	for (i = m; i <= n; i++)
+//	{
+//        if (prime(i))
+//        {
+//            count++;
+//            sum += i;
+//        }
+//	}
+//    printf("%d %d", count, sum);
+//	return 0;
+//}
+//int prime(int p)//这个函数用于判断输入的数字是不是素数
+//{
+//    int i, limit;//i是循环变量
+//    if (p <= 1)//小于等于1的数不是素数，返回0；
+//        return 0;
+//    else if (p == 2)//2是素数，返回1；这两种情况比较特殊，单独拿出来。（个人感觉）
+//        return 1;
+//    else//大于2的正整数，
+//    {
+//        limit = sqrt(p) + 1;
+//        for (i = 2; i <= limit; i++)//素数得到判断
+//        {
+//            if (p % i == 0)//如果能被其中一个i整除，说明不是素数，返回0；
+//                return 0;
+//        }
+//        return 1;//如果不能被i整除，说明是素数，返回1；
+//    }
+//}
+
+//#include<stdio.h>//字符串字母大小写转换 
+//int main()
+//{
+//    char ch;
+//    ch = getchar();
+//    while (ch != '#')
+//    {
+//        if (ch >= 'A' && ch <= 'Z')
+//            ch = ch - 'A' + 'a';
+//        else if (ch >= 'a' && ch <= 'z')
+//            ch = ch - 'a' + 'A';
+//        putchar(ch);
+//        ch = getchar();
+//    }
+//    return 0;
+//}
+//
+//#include <stdio.h>//使用函数求奇数和
+//#define MAXN 10
+//int even(int n);
+//int OddSum(int List[], int N);
+//int main()
+//{
+//    int List[MAXN], N, i;
+//    scanf("%d", &N);
+//    printf("Sum of ( ");
+//    for (i = 0; i < N; i++) {
+//        scanf("%d", &List[i]);
+//        if (even(List[i]) == 0)
+//            printf("%d ", List[i]);
+//    }
+//    printf(") = %d\n", OddSum(List, N));
+//    return 0;
+//}
+//int even(int n)//判断输入的数字是奇数还是偶数；
+//{
+//    if (n % 2)//偶数，返回1；奇数返回0；
+//        return 0;
+//    else
+//        return 1;
+//}
+//int OddSum(int List[], int N)
+//{
+//    int i = 0, sum = 0;//定义i为循环变量，sum为求一系列数字中奇数的和
+//    for (i = 0; i <= N; i++)//这里i从零开始，是因为，在数组中，第一个元素的下标是0；
+//        if (even(List[i]) == 0)
+//            sum = sum + List[i];
+//    return sum;
+//}
+
+//
+//#include <stdio.h>//使用函数求素数和
+//#include <math.h>
+//int prime(int p);
+//int PrimeSum(int m, int n);
+//int main()
+//{
+//    int m, n, p;
+//    scanf("%d %d", &m, &n);
+//    printf("Sum of ( ");
+//    for (p = m; p <= n; p++) {
+//        if (prime(p) != 0)
+//            printf("%d ", p);
+//    }
+//    printf(") = %d\n", PrimeSum(m, n));
+//    return 0;
+//}
+//int prime(int p)//这个函数用于判断输入的数字是不是素数
+//{
+//    int i, limit;//i是循环变量
+//    if (p <= 1)//小于等于1的数不是素数，返回0；
+//        return 0;
+//    else if (p == 2)//2是素数，返回1；这两种情况比较特殊，单独拿出来。（个人感觉）
+//        return 1;
+//    else//大于2的正整数，
+//    {
+//        limit = sqrt(p) + 1;
+//        for (i = 2; i <= limit; i++)//素数得到判断
+//        {
+//            if (p % i == 0)//如果能被其中一个i整除，说明不是素数，返回0；
+//                return 0;
+//        }
+//        return 1;//如果不能被i整除，说明是素数，返回1；
+//    }
+//}
+//int PrimeSum(int m, int n)//这个函数是用来求给定区间内所有素数的和，
+//{
+//    int k = 0, sum = 0;//k是循环变量
+//    for (k = m; k <= n; k++)
+//    {
+//        if (prime(k) == 1)//借用上一个函数来判断是不是素数，
+//            sum = sum + k;//是素数就加起来，
+//    }
+//    return sum;//最后题目所需的是所有素数的和，所有返回主函数的，也应该是所有素数的和.
+//}
