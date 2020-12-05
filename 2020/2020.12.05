@@ -1,0 +1,217 @@
+//niuke练习
+//#include<stdio.h>//BC-1
+//int main()
+//{
+//
+//	printf("Practice makes perfect!\n");
+//	return 0;
+//}
+
+//#include<stdio.h>//BC-2
+//int main()
+//{
+//	printf("v   v\n");
+//	printf(" v v\n");
+//	printf("  v\n");
+//	return 0;
+//}
+
+//#include<stdio.h>//BC-3
+//int main()
+//{
+//	printf("The size of short is %d byte.\n", sizeof(short));
+//	printf("The size of char is %d byte.\n", sizeof(char));
+//	printf("The size of int is %d byte.\n", sizeof(int));
+//	printf("The size of long is %d byte.\n", sizeof(long));
+//	printf("The size of long long is %d byte.\n", sizeof(long long));
+//	printf("The size of double is %d byte.\n", sizeof(double));
+//	return 0;
+//}
+//sizeof 操作符，计算大小的操作符。
+
+//#include<stdio.h>//BC-7
+//int main()
+//{
+//	printf("0%o 0X%x",1234,1234);
+//	return 0;
+//}
+//%c--打印字符
+//%s--打印字符串
+//%hd--打印短整型
+//%p--打印地址
+
+//#include<stdio.h>//BC-19
+//int main()
+//{
+//    int a = 0;
+//    scanf_s("%d", &a);
+//    while (a)
+//    {
+//        printf("%d", a % 10);
+//        a = a / 10;
+//    }
+//    return 0;
+//}
+
+//#include<stdio.h>
+//int main()
+//{
+//	int ch = 0;
+//	while ((ch=getchar())!=EOF)
+//	{
+//		PRINTF("%c\n", ch + 32);
+//		getchar();//清理\n.
+//	}
+//	return 0;
+//}
+//输入缓冲区的概念
+
+//#include<stdio.h>//输出所有大于平均值的数
+
+//int main()
+//{
+//	int i, n;
+//    double sum, average;
+//	int a[10];
+//	printf("Enter n:");
+//	scanf_s("%d", &n);
+//	if (n >= 1 && n <= 10)
+//	{
+//		printf("Enter %d integers:", n);
+//		for (i = 0; i < n; i++)
+//		{
+//			scanf_s("%d", &a[i]);
+//		}
+//		sum = 0;
+//		for (i = 0; i < n; i++)
+//		{
+//			sum = sum + a[i];
+//		}
+//		average = sum / n;//求平均值.
+//		printf("average = %.2f\n", average);
+//		printf(">average");
+//		for (i = 0; i < n; i++)
+//		{
+//			if (a[i] > average)
+//				printf("%d ", a[i]);
+//		}
+//		printf("\n");
+//
+//	}
+//	else
+//		printf("Invalid Value.\n");
+//	return 0;
+//}
+
+//使用数组计算斐波那契数列
+//#include<stdio.h>
+//int main()
+//{
+//	int i, n;
+//	int fib[46] = { 1,1 };
+//	printf("Enter n:");
+//	scanf_s("%d", &n);
+//	if (n >= 1 && n <= 46)
+//	{
+//		for (i = 2; i < 10; i++)
+//		{
+//			fib[i] = fib[i - 1] +fib[i - 2];
+//		}
+//		for (i = 0; i < 10; i++)
+//		{
+//			printf("%6d", fib[i]);
+//			if ((i + 1) % 5 == 0)
+//				printf("\n");
+//		}
+//		if (n % 5 == 0)
+//			printf("\n");
+//	}
+//	else
+//		printf("Invalid Value.\n");
+//	return 0;
+//}
+
+//在数组中的顺序查找
+//#include<stdio.h>
+//int main()
+//{
+//	int i, flag, n=0, x=0;
+//	int ch[10];
+//	printf("Enter n,x: ", n, x);
+//	scanf_s("%d %d", &n, &x);
+//	printf("Enter %d integers:", n);
+//	for (i = 0; i < n; i++)
+//	{
+//		scanf_s("%d", &ch[i]);
+//	}
+//	flag = 0;
+//	for (i = 0; i < n; i++)
+//	{
+//		if (ch[i] == x)
+//		{
+//			printf("Index is %d\n", i);
+//			flag = 1;
+//		}
+//	}
+//	if (!flag)
+//		printf("Not Found\n");
+//	return 0;
+//}
+
+//找出数组中最小值，并输出其下标
+//#include<stdio.h>
+//int main()
+//{
+//	int i, index, n;
+//	int a[10];
+//	printf("Enter n:");
+//	scanf_s("%d", &n);
+//	printf("Enter %d integers:", n);
+//	for (i = 0; i < n; i++)
+//	{
+//		scanf_s("%d", &a[i]);
+//	}
+//	index = 0;
+//	for (i = 1; i < n; i++)
+//	{
+//		if (a[i] < a[index])
+//			index = i;
+//	}
+//	printf("min is %d\tsub is %d\n", a[index], index);
+//	return 0;
+//}
+
+//选择法排序
+//#include<stdio.h>
+//int main()
+//{
+//
+//	int i, index, k, n, temp;
+//	int a[10];
+//	printf("Enter n:");
+//	scanf_s("%d", &n);
+//	printf("Enter %d integers:", n);
+//	for (i = 0; i < n; i++)
+//	{
+//		scanf_s("%d", &a[i]);
+//	}
+//	for (k = 0; k < n - 1; k++)
+//	{
+//		index = k;
+//		for (i = k + 1; i < n; i++)
+//		{
+//			if (a[i] < a[index])
+//				index = i;
+//		}
+//		temp = a[index];
+//		a[index] = a[k];
+//		a[k] = temp;
+//	}
+//	printf("After sorted:");
+//	for (i = 0; i < n; i++)
+//	{
+//		printf("%d ", a[i]);
+//	}
+//	printf("\n");
+//	return 0;
+//}
