@@ -1,0 +1,217 @@
+//#include <stdio.h>
+//#include <string.h>
+//
+//#define MAXS 10
+//
+//void Shift(char s[]);
+//
+//void GetString(char s[])
+//{
+//    gets(s);
+//}
+//
+//int main()
+//{
+//    char s[MAXS];
+//
+//    GetString(s);
+//    Shift(s);
+//    printf("%s\n", s);
+//
+//    return 0;
+//}
+//
+//void Shift(char s[])
+//{
+//    int len = strlen(s);
+//    int i = 0, j = 0;
+//    for (i = 0; i < 3; i++)//前三个字母去最后
+//    {
+//        char a = s[0];//a到末尾以后，b就成第0个元素了
+//        for (j = 0; j < len; j++)//其他字母应该向前进一个
+//        {
+//            s[j] = s[j + 1];//当第一个去末尾以后，其他数向前移动一个
+//        }
+//        s[len - 1] = a;//末尾捕获数字第一个字符
+//    }
+//}
+
+
+//#include <stdio.h>
+//
+//void splitfloat(float x, int* intpart, float* fracpart);
+//
+//int main()
+//{
+//    float x, fracpart;
+//    int intpart;
+//
+//    scanf_s("%f", &x);
+//    splitfloat(x, &intpart, &fracpart);
+//    printf("The integer part is %d\n", intpart);
+//    printf("The fractional part is %g\n", fracpart);
+//
+//    return 0;
+//}
+//void splitfloat(float x, int* intpart, float* fracpart)
+//{
+//    int num = x;
+//    *intpart = num;
+//    *fracpart = x - num;
+//}
+
+
+//判断回文
+//#include <stdio.h>
+//#include <string.h>
+//
+//#define MAXN 20
+//typedef enum { false, true } bool;
+//
+//bool palindrome(char* s);
+//
+//int main()
+//{
+//    char s[MAXN];
+//
+//    scanf_s("%s", s);
+//    if (palindrome(s) == true)
+//        printf("Yes\n");
+//    else
+//        printf("No\n");
+//    printf("%s\n", s);
+//
+//    return 0;
+//}
+//
+//bool palindrome(char* s)
+//{
+//    int len = strlen(s);
+//    int i, flag = 1;
+//    for (i = 0; i < len; i++)
+//    {
+//        if (s[i] != s[len - i - 1])
+//        {
+//            flag = 0;
+//            break;
+//        }
+//    }
+//    if (!flag)
+//        return false;
+//    else
+//        return true;
+//}
+
+
+//输出学生成绩
+//#include<stdio.h>
+//
+//int main()
+//{
+//    int n = 0, i = 0, sum = 0;
+//    scanf_s"%d", &n);
+//    int a[n];
+//    for (i = 0; i < n; i++)
+//    {
+//        scanf_s("%d ", &a[i]);
+//        sum += a[i];
+//    }
+//    double aver = sum * 1.0 / n;
+//    double max = a[0], min = a[0];
+//    for (i = 0; i < n; i++)
+//    {
+//        if (a[i] > max)
+//            max = a[i];
+//        if (a[i] < min)
+//            min = a[i];
+//    }
+//    printf("average = %.2f\n", aver);
+//    printf("max = %.2f\n", max);
+//    printf("min = %.2f\n", min);
+//    return 0;
+//}
+
+
+//矩阵运算
+//#include<stdio.h>
+//
+//int main()
+//{
+//    int n = 0, i = 0, j = 0, sum = 0;
+//    scanf_s("%d", &n);
+//    int a[n][n];
+//    for (i = 0; i < n; i++)//行
+//    {
+//        for (j = 0; j < n; j++)//列
+//        {
+//            scanf_S("%d ", &a[i][j]);
+//            sum += a[i][j];//把所有元素相加
+//        }
+//    }
+//    int num1 = 0, num2 = 0, num3 = 0, num = 0;
+//    for (i = 0; i < n; i++)
+//    {
+//        num1 = num1 + a[i][n - 1];//最后一列
+//        num2 = num2 + a[n - 1][i];//最后一行
+//        num3 = num3 + a[i][n - 1 - i];//副对角线
+//    }
+//    num = num1 + num2 + num3 - a[n - 1][n - 1] - a[0][n - 1] - a[n - 1][0];//三者之和-去重复相加的数
+//    sum = sum - num;
+//    printf("%d", sum);
+//    return 0;
+//}
+
+
+//找最长字符串
+//#include<stdio.h>
+//#include<string.h>
+//
+//int main()
+//{
+//    int n = 0, i = 0, len = 0, k = 0;//len用来计算字符串长度，k用来记最长字符串下标
+//    scanf_s("%d", &n);
+//    char a[n][80];
+//    for (i = 0; i < n; i++)
+//    {
+//        scanf_s("%s", a[i]);//输入一串串的字符串
+//        if (len < strlen(a[i]))//因为字符串非空，所有len可以=0；
+//            //这里来寻找最长的字符串
+//        {
+//            len = strlen(a[i]);
+//            k = i;
+//        }
+//    }
+//    printf("The longest is: %s", a[k]);
+//    return 0;
+//}
+
+//输入一个整数序列，判断是否是有序序列，有序，指序列中的整数从小到大排序或者从大到小排序。
+//#include<stdio.h>
+//
+//int main()
+//{
+//    int n, i = 0, sheng = 0, jiang = 0;
+//    scanf_s("%d", &n);
+//    int a[n];
+//    for (i = 0; i < n; i++)
+//        scanf_s("%d ", &a[i]);
+//    for (i = 1; i < n; i++)
+//    {
+//        if (a[i - 1] >= a[i])
+//        {
+//            jiang++;
+//        }
+//    }
+//    for (i = 1; i < n; i++)
+//    {
+//        if (a[i - 1] <= a[i])
+//        {
+//            sheng++;
+//        }
+//    }
+//    if (sheng == n - 1 || jiang == n - 1)
+//        printf("sorted");
+//    else
+//        printf("unsorted");
+//    return 0;
+//}
