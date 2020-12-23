@@ -1,0 +1,183 @@
+//PTA 天梯赛 10分题
+
+//L1-013计算n的阶乘和
+//#include<stdio.h>
+//int fib(int n)
+//{
+//    int i, sum = 1;
+//    for (i = 1; i <= n; i++)
+//    {
+//        sum = sum * i;
+//    }
+//    return sum;
+//}
+//int main()
+//{
+//    int n, s = 0;
+//    scanf_s("%d", &n);
+//    for (int i = 1; i <= n; i++)
+//    {
+//        s = s + fib(i);
+//    }
+//    printf("%d\n", s);
+//    return 0;
+//}
+
+//L1-007 念数字
+//#include <stdio.h>
+//
+//int main()
+//{
+//	char ch;
+//	ch = getchar();
+//	while (ch != '\n')
+//	{
+//		switch (ch)
+//		{
+//		case '0':printf("ling"); break;
+//		case '1':printf("yi");   break;
+//		case '2':printf("er");   break;
+//		case '3':printf("san");  break;
+//		case '4':printf("si");   break;
+//		case '5':printf("wu");   break;
+//		case '6':printf("liu");  break;
+//		case '7':printf("qi");   break;
+//		case '8':printf("ba");   break;
+//		case '9':printf("jiu");  break;
+//		case '-':printf("fu");   break;
+//		}
+//		ch = getchar();
+//		if (ch != '\n')
+//			printf(" ");
+//	}
+//	return 0;
+//}
+
+//L1-008 求整数段和
+//#include<stdio.h>
+//int main()
+//{
+//    int a, b, i, sum = 0, k = 0;
+//    scanf_s("%d %d", &a, &b);
+//    for (i = a; i <= b; i++)
+//    {
+//        sum += i;
+//        printf("%5d", i);
+//        k++;
+//        if (k % 5 == 0 && k != b)
+//        {
+//            printf("\n");
+//            k = 0;
+//        }
+//    }
+//    printf("\nSum = %d\n", sum);
+//    return 0;
+//}
+
+
+//L1-010比较大小
+//#include<stdio.h>
+//int main()
+//{
+//    int a, b, c, temp = 0;
+//    scanf_s("%d %d %d", &a, &b, &c);
+//    if (a > c)
+//    {
+//        temp = a;
+//        a = c;
+//        c = temp;
+//    }
+//    if (a > b)
+//    {
+//        temp = a;
+//        a = b;
+//        b = temp;
+//    }
+//    if (b > c)
+//    {
+//        temp = b;
+//        b = c;
+//        c = temp;
+//    }
+//    printf("%d->%d->%d\n", a, b, c);
+//    return 0;
+//}
+
+
+//L1-018大本钟
+//#include<stdio.h>
+//int main()
+//{
+//    int hh, mm;
+//    scanf_s("%d:%d", &hh, &mm);
+//    if (hh >= 0 && hh <= 12)
+//    {
+//        if (hh == 12 && mm > 0)
+//            printf("Dang\n");
+//        else
+//            printf("Only %02d:%02d.  Too early to Dang.\n", hh, mm);
+//    }
+//    else if (hh > 12 && hh < 24)
+//    {
+//        if (mm == 0)
+//            for (int i = 0; i < hh - 12; i++)
+//                printf("Dang");
+//        else
+//            for (int i = 0; i < hh - 11; i++)
+//                printf("Dang");
+//    }
+//    return 0;
+//}
+
+
+//L1-022奇偶分家
+//#include<stdio.h>
+//
+//int main()
+//{
+//    int a[1000], i = 0, n;
+//    int count = 0, letter = 0;
+//    scanf_s("%d", &n);
+//    for (i = 0; i < n; i++)
+//    {
+//        scanf("%d", &a[i]);
+//        if (a[i] % 2 == 0)
+//            count++;
+//        else
+//            letter++;
+//    }
+//    printf("%d %d\n", letter, count);
+//    return 0;
+//}
+
+
+//L1-028判断素数
+//#include<stdio.h>
+//#include<math.h>
+//int prime(int n)
+//{
+//	if (n == 1)
+//		return 0;
+//	if (n == 2)
+//		return 1;
+//	for (int i = 2; i <= sqrt(n) + 1; i++)
+//	{
+//		if (n % i == 0)
+//			return 0;
+//	}
+//	return 1;
+//}
+//int main()
+//{
+//	int n, num;
+//	scanf_s("%d", &n);
+//	for (int i = 1; i <= n; i++)
+//	{
+//		scanf_s("%d", &num);
+//		if (prime(num))
+//			printf("Yes\n");
+//		else
+//			printf("No\n");
+//	}
+//	return 0;
+//}
