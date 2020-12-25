@@ -1,0 +1,206 @@
+//翻转金字塔
+//#include <stdio.h>
+//int main()
+//{
+//    int n = 0;
+//    while (scanf_s("%d", &n) != EOF)
+//    {
+//        int i = 0;
+//        for (i = 0; i < n; i++)
+//        {
+//            //一行
+//            int j = 0;
+//            for (j = 0; j < i; j++)
+//            {
+//                printf(" ");
+//            }
+//            for (j = 0; j < n - i; j++)
+//            {
+//                printf("* ");
+//            }
+//            printf("\n");
+//        }
+//    }
+//    return 0;
+//}
+
+
+//菱形图案
+//#include <stdio.h>
+//int main()
+//{
+//    int n = 0;
+//    while (scanf_s("%d", &n) != EOF)
+//    {
+//        int i = 0;
+//        //上
+//        for (i = 0; i < n; i++)
+//        {
+//            //一行
+//            int j = 0;
+//            for (j = 0; j < n - i; j++)
+//            {
+//                printf(" ");
+//            }
+//            for (j = 0; j <= i; j++)
+//            {
+//                printf("* ");
+//            }
+//            printf("\n");
+//        }
+//        for (i = 0; i <= n; i++)
+//        {
+//            //一行
+//            int j = 0;
+//            for (j = 0; j < i; j++)
+//            {
+//                printf(" ");
+//            }
+//            for (j = 0; j <= n - i; j++)
+//            {
+//                printf("* ");
+//            }
+//            printf("\n");
+//        }
+//    }
+//    return 0;
+//}
+
+
+//K型图案
+//#include <stdio.h>
+////这个题好坑
+//int main()
+//{
+//    int n = 0;
+//    //如果输入的是n，其实每行打印n+1组字符（*和空格）
+//    while (scanf_s("%d", &n) != EOF)
+//    {
+//        int i = 0;
+//        for (i = n; i >= 0; i--)
+//        {
+//            int j = 0;
+//            for (j = 0; j <= i; j++)
+//            {
+//                printf("* ");
+//            }
+//            //*的后面还有空格-这个比较坑
+//            for (j = i; j < n; j++)
+//            {
+//                printf(" ");
+//            }
+//            printf("\n");
+//        }
+//        for (i = 1; i <= n; i++)
+//        {
+//            int j = 0;
+//            for (j = 0; j <= i; j++)
+//            {
+//                printf("* ");
+//            }
+//            //*的后边还有空格-这个比较坑
+//            for (j = i; j < n; j++)
+//            {
+//                printf(" ");
+//            }
+//            printf("\n");
+//        }
+//    }
+//    return 0;
+//}
+
+
+//箭型图案
+//#include <stdio.h>
+//int main()
+//{
+//    int n = 0;
+//    while (scanf_s("%d", &n) != EOF)
+//    {
+//        //上n行
+//        int i = 0;
+//        for (i = n; i > 0; i--)
+//        {
+//            int j = 0;
+//            for (j = 0; j < i; j++)
+//            {
+//                printf(" ");
+//            }
+//            for (j = 0; j <= n - i; j++)
+//            {
+//                printf("*");
+//            }
+//            printf("\n");
+//        }
+//        //下n+1行
+//        for (i = n + 1; i > 0; i--)
+//        {
+//            int j = 0;
+//            for (j = 0; j < n + 1 - i; j++)
+//            {
+//                printf(" ");
+//            }
+//            for (j = 0; j < i; j++)
+//            {
+//                printf("*");
+//            }
+//            printf("\n");
+//        }
+//    }
+//    return 0;
+//}
+
+
+//反斜线型图案
+//#include <stdio.h>
+////方法1-传统求解方式
+//int main()
+//{
+//    int n = 0;
+//    while (scanf_s("%d", &n) != EOF)
+//    {
+//        int i = 0;
+//        for (i = 0; i < n; i++)
+//        {
+//            //空格
+//            int j = 0;
+//            for (j = 0; j < i; j++)
+//            {
+//                printf(" ");
+//            }
+//            //*
+//            printf("*");
+//            //注意*后边的空格
+//            for (j = i + 1; j < n; j++)
+//            {
+//                printf(" ");
+//            }
+//            printf("\n");
+//        }
+//    }
+//    return 0;
+//}
+
+//方法2
+//找出规律
+//int main()
+//{
+//    int n = 0;
+//    while (scanf_s("%d", &n) != EOF)
+//    {
+//        int i = 0;
+//        for (i = 0; i < n; i++)
+//        {
+//            int j = 0;
+//            for (j = 0; j < n; j++)
+//            {
+//                if (i == j)
+//                    printf("*");
+//                else
+//                    printf(" ");
+//            }
+//            printf("\n");
+//        }
+//    }
+//    return 0;
+//}
