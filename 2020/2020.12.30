@@ -1,0 +1,135 @@
+//#include<stdio.h>
+//
+//int main()
+//{
+//    int n;
+//    while (~scanf("%d", &n))
+//    {
+//        int i, j;
+//        for (i = 1; i <= n; i++)
+//        {
+//            for (j = 1; j <= n; j++)
+//            {
+//                if ((i == j) || (i + j - 1 == n))
+//                {
+//                    printf("*");
+//                }
+//                else
+//                {
+//                    printf(" ");
+//                }
+//            }
+//            printf("\n");
+//        }
+//
+//    }
+//    return 0;
+//}
+
+
+//#include<stdio.h>
+//int main()
+//{
+//    int num, i, j;
+//    while (~scanf("%d", &num))
+//    {
+//        for (i = 1; i <= num; i++)
+//        {
+//            for (j = 1; j <= num; j++)
+//            {
+//                if (j == 1 || j == num || i == 1 || i == num)
+//                {
+//                    printf("* ");
+//                }
+//
+//                else printf("  ");
+//            }
+//            printf("\n");
+//        }
+//    }
+//    return 0;
+//}
+
+
+//#include <stdio.h>
+//
+//int main()
+//{
+//    int i, n, m;
+//    while (~scanf("%d%*c", &i))
+//    {
+//        for (n = 1; n <= i; n++)
+//        {
+//            printf("* ");
+//            for (m = 2; m <= i; m++)
+//            {
+//                if (m == n || n == i)
+//                    printf("* ");
+//                else
+//                    printf("  ");
+//            }
+//            printf("\n");
+//        }
+//    }
+//    return 0;
+//}
+
+
+//#include<stdio.h>
+//int main() {
+//    int n;
+//    while (scanf_s("%d", &n) != EOF) 
+//  {
+//        switch (n)
+//        {
+//        case 200: printf("OK\n");
+//            break;
+//        case 202: printf("Accepted\n");
+//            break;
+//        case 400: printf("Bad Request\n");
+//            break;
+//        case 403: printf("Forbidden\n");
+//            break;
+//        case 404: printf("Not Found\n");
+//            break;
+//        case 500: printf("Internal Server Error\n");
+//            break;
+//        case 502: printf("Bad Gateway\n");
+//            break;
+//        }
+//    }
+//    return 0;
+//}
+
+
+//int main()
+//{
+//	//储存n个数组
+//	int a[55], n, i, x;
+//	scanf("%d", &n);
+//	for (i = 0; i < n; i++)
+//	{
+//		scanf("%d", &a[i]);
+//	}
+//	scanf("%d", &x);
+//	for (i = n; i > 0; i--)
+//	{
+//		//排序
+//		if (a[i - 1] >= x)
+//		{
+//
+//			a[i] = a[i - 1];
+//		}
+//		else
+//		{
+//			a[i] = x;
+//			break;
+//		}
+//	}
+//	if (i == 0) a[i] = x;
+//	for (i = 0; i <= n; i++)
+//	{
+//		if (i == n) printf("%d\n", a[i]);
+//		else printf("%d ", a[i]);
+//	}
+//}
